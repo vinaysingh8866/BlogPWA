@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WebApplication1.Models.Blog>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+@*              @Html.DisplayNameFor(model => model.blog_content)
+
+    @Html.DisplayNameFor(model => model.auther_name)
+*@
+
+
+@foreach (var item in Model)
+{
+    <div class="card" style="width: 200rem;">
+        <div class="card-body">
+            <h5 class="card-title"> @Html.DisplayFor(modelItem => item.auther_name)</h5>
+
+            <p class="card-text">@Html.DisplayFor(modelItem => item.blog_content)</p>
+
+        </div>
+    </div>
+}
+
