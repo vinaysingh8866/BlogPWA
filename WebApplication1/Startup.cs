@@ -12,6 +12,7 @@ using WebApplication1.Models;
 
 
 using Microsoft.EntityFrameworkCore;
+
 namespace WebApplication1
 {
     public class Startup
@@ -30,6 +31,8 @@ namespace WebApplication1
 
 
             services.AddControllersWithViews();
+
+            services.AddProgressiveWebApp();
 
 
 
