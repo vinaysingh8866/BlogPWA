@@ -56,7 +56,7 @@
             var _link = "/Blog/Details/" + link
             caches.open(version).then(function (cache) {
                 cache.delete(link).then(function (response) {
-                    someUIUpdateFunction();
+                    console.log("UnCached")
                 });
             })
         }
@@ -71,6 +71,7 @@
             try {
                 navigator.share(shareData);
                 console.log('Blog shared successfully');
+
             } catch (err) {
                 console.log('Error: ' + err);
             }
