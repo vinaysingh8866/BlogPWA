@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using WebApplication1.Models;
 using Microsoft.EntityFrameworkCore;
-
+using System.Net;
 
 namespace WebApplication1.Controllers
 {
@@ -32,6 +32,18 @@ namespace WebApplication1.Controllers
 
             return View();
         }
+
+
+        [HttpPost]
+        public IActionResult Details(int? id)
+        {
+            
+            Blog b = _db.BlogTable.Find(id);
+            
+            return View(b);
+        }
+
+
 
         [HttpPost]
         public async Task<IActionResult> Create(Blog bc)
