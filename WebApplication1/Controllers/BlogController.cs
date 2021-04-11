@@ -38,7 +38,7 @@ namespace WebApplication1.Controllers
         {
             
             Blog bc = _db.BlogTable.Find(id);
-            Console.WriteLine(bc.auther_name);
+            //Console.WriteLine(bc.auther_name);
             return View(bc);
         }
 
