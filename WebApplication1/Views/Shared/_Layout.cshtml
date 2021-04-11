@@ -51,6 +51,30 @@
                 ]);
             })
         }
+        function uncacheApp(link) {
+            version = 'Blog Worker ::CacheFirst';
+            var _link = "/Blog/Details/" + link
+            caches.open(version).then(function (cache) {
+                cache.delete(link).then(function (response) {
+                    someUIUpdateFunction();
+                });
+            })
+        }
+
+        function share(link) {
+            var _link = "https://localhost:44348/Blog/Details/" + link;
+            const shareData = {
+                title: 'Blog',
+                text: 'Sharing Blog',
+                url: link,
+            }
+            try {
+                navigator.share(shareData);
+                console.log('Blog shared successfully');
+            } catch (err) {
+                console.log('Error: ' + err);
+            }
+        }
     </script>
 
     @RenderSection("Scripts", required: false)
