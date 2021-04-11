@@ -12,6 +12,7 @@ using WebApplication1.Models;
 
 
 using Microsoft.EntityFrameworkCore;
+using WebEssentials.AspNetCore.Pwa;
 
 namespace WebApplication1
 {
@@ -32,7 +33,14 @@ namespace WebApplication1
 
             services.AddControllersWithViews();
 
-            services.AddProgressiveWebApp();
+            services.AddProgressiveWebApp(new PwaOptions
+            {
+                CacheId = "Blog Worker ",
+                Strategy = ServiceWorkerStrategy.CacheFirst,
+                RoutesToPreCache = "/css/site.css,/js/site.js, /blog/create",
+
+                OfflineRoute = "/",
+            }) ;
 
 
 

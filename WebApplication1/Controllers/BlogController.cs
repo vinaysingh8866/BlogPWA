@@ -22,7 +22,7 @@ namespace WebApplication1.Controllers
         public IActionResult Index()
         {
             var displayData = _db.BlogTable.ToList();
-
+            
             return View(displayData);
         }
 
