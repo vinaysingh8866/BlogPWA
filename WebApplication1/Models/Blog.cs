@@ -24,7 +24,9 @@ namespace WebApplication1.Models
         [Display(Name = "Auther Name")]
         public string auther_name { get; set; }
 
-        
+        [Display(Name = "Image URL")]
+        public string image { get; set; }
+
 
 
 

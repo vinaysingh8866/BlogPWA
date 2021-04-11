@@ -1,13 +1,15 @@
 ﻿@model IEnumerable<WebApplication1.Models.Blog>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Create Blog";
 }
 
-<h1>Index</h1>
+<h1 style="color:white;">Top 5 Blogs</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <button type="button" class="btn btn-dark" style="dro">
+        <a asp-action="Create" style="color:white;">Create New</a>
+    </button>
 </p>
 
 @*              @Html.DisplayNameFor(model => model.blog_content)
@@ -18,10 +20,10 @@
 
 @foreach (var item in Model.Take(5))
 {
-    <div class="card" style="width: 200rem;">
+    <div class="card" style="width: 70vw;">
         <div class="card-body">
-            <h5 class="card-title"> @Html.DisplayFor(modelItem => item.auther_name)</h5>
-
+            <h5 class="card-title" style=""> @Html.DisplayFor(modelItem => item.auther_name)</h5>
+            
             <p class="card-text">@Html.DisplayFor(modelItem => item.blog_content)</p>
 
         </div>
