@@ -21,7 +21,7 @@ namespace WebApplication1.Models
 
 
         [Required(ErrorMessage = "Enter auther name")]
-        [Display(Name = "Auther Name")]
+        [Display(Name = "Title")]
         public string auther_name { get; set; }
 
         [Display(Name = "Image URL")]
