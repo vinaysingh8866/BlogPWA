@@ -20,9 +20,9 @@ namespace WebApplication1.Models
         public string blog_content { get; set; }
 
 
-        [Required(ErrorMessage = "Enter auther name")]
+        [Required(ErrorMessage = "Enter Title")]
         [Display(Name = "Title")]
-        public string auther_name { get; set; }
+        public string title { get; set; }
 
         [Display(Name = "Image URL")]
         public string image { get; set; }

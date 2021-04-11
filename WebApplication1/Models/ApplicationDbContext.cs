@@ -13,7 +13,7 @@ namespace WebApplication1.Models
 
         }
 
-        public DbSet<Blog> BlogTable { get; set; }
+        public DbSet<Blog> Blog_Table { get; set; }
 
     }
 }

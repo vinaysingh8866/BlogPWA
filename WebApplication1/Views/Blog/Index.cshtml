@@ -20,16 +20,16 @@
 
 @foreach (var item in Model.Take(5))
 {
-<div class="card" style="width: 70vw;">
+<div class="card" style="width: 80vw;">
     <button class="btn btn-dark"><a asp-action="Details" asp-route-id="@item.id">Details</a></button>
     <div class="card-body">
-        <h5 class="card-title" style=""> @Html.DisplayFor(modelItem => item.auther_name)</h5>
+        <h5 class="card-title" style=""> @Html.DisplayFor(modelItem => item.title)</h5>
         <img src="@Html.DisplayFor(modelItem => item.image)" style="width:100%;" />
         <p class="card-text">@Html.DisplayFor(modelItem => item.blog_content)</p>
-
 
     </div>
 
 </div>
+<br />
 }
 

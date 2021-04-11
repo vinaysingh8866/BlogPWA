@@ -21,7 +21,7 @@ namespace WebApplication1.Controllers
         }
         public IActionResult Index()
         {
-            var displayData = _db.BlogTable.ToList();
+            var displayData = _db.Blog_Table.ToList();
             
             return View(displayData);
         }
@@ -37,7 +37,7 @@ namespace WebApplication1.Controllers
         public IActionResult Details(int? id)
         {
             
-            Blog bc = _db.BlogTable.Find(id);
+            Blog bc = _db.Blog_Table.Find(id);
             //Console.WriteLine(bc.auther_name);
             return View(bc);
         }
