@@ -34,13 +34,12 @@ namespace WebApplication1.Controllers
         }
 
 
-        [HttpPost]
         public IActionResult Details(int? id)
         {
             
-            Blog b = _db.BlogTable.Find(id);
-            
-            return View(b);
+            Blog bc = _db.BlogTable.Find(id);
+            Console.WriteLine(bc.auther_name);
+            return View(bc);
         }
 
 
